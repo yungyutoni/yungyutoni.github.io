@@ -1,0 +1,204 @@
+    :root{
+      --page-bg:#000;
+      --text:#fff;
+      --muted:#cfd8dc;
+      --btn-bg:#141a22;
+      --btn-bd:#283242;
+      --btn-bd-hover:#405674;
+      --accent:#4fc3f7;
+      --board-size:1000px; /* keep fixed to match image-map pixel coords */
+    }
+
+  #soundIndicator{
+    position:fixed; top:12px; right:14px; z-index:9999;
+    font: 700 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    letter-spacing:.04em; text-transform:uppercase;
+    color:#ff3b30;                  /* red */
+    user-select:none; pointer-events:none;  /* doesn’t block the click */
+  }
+  #soundIndicator.on{ color:#22c55e; }      /* green */
+
+
+    /* If your big title lives inside .hero, use absolute on that section */
+.hero { position: relative; }              /* ensure a positioning context */
+
+.hud{
+  position: fixed;                      /* or: fixed to keep it on screen */
+  top: 12px;
+  left: 12px;
+  display: grid;
+  gap: 6px;
+  z-index: 10;                             /* above background/title */
+}
+.hud h1,.hud h2,.hud h3,.hud h4,.hud h5,.hud h6,
+.hud p,.hud div { margin:0; line-height:2.25; }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      padding:24px var(--pad) 40px;
+      font-size:14px;
+    }
+
+
+/* If you prefer it always visible as you scroll, use: */
+/* .hud { position: fixed; top:12px; left:12px; } */
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      font:14px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    .wrap{
+      width:min(96vw,1400px);
+      margin:0 auto;
+      padding:28px 16px 64px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+    }
+    header{ text-align:center; }
+    header h1{ margin:0 0 6px; font-size:20px; font-weight:800; }
+    header p{ margin:0; color:var(--muted); }
+    .actions{ display:flex; gap:10px; margin-top:10px; align-items:center;  justify-content:center;  flex-wrap:wrap; }      /* optional, keeps them vertically aligned */
+    .btn{
+      background:var(--btn-bg);
+      border:1px solid var(--btn-bd);
+      color:var(--text);
+      padding:8px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn:hover{ border-color:var(--btn-bd-hover); }
+    .btn.primary{ color:var(--accent); }
+
+    /* Board container keeps the image centered and at exact 1000×1000 */
+    .board{
+      position: relative;
+      margin-top:18px;
+      width:var(--board-size);
+      height:var(--board-size);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      outline:1px solid #111; /* subtle frame on black */
+    }
+    .board img{
+      width:100%;
+      height:100%;
+      display:block;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;
+      
+    }
+
+    #instant-tip{
+  position:fixed; pointer-events:none; z-index:9999;
+  background:rgba(0, 0, 0, 0.85); color:#fff;
+  font:12px/1.3 system-ui, sans-serif;
+  padding:6px 8px; 
+  transform:translate(10px, 10px); /* offset from cursor */
+  display:none; white-space:nowrap;
+  }
+
+  /* The layer that sits over the image map */
+.glow-layer {
+  position: absolute;
+  width: 100%;              /* ← scales with image */
+  height: 100%;
+  inset: 0; /* covers the same 1000×1000 area */
+  pointer-events: none; /* so it doesn't block clicks on <area> */
+  z-index: 1; /* sits above the image */
+}
+
+/* Every glow box inside the layer */
+.glow {
+  position: absolute;
+  border: 1px solid rgba(234, 0, 255, 0.6); /* faint cyan border */
+  box-shadow: 0 0 17px rgba(0, 47, 255, 0.7),
+              0 0 20px rgba(0, 255, 255, 0.623);
+
+  animation: pulse 1s ease-in-out infinite;
+  mix-blend-mode: screen; /* makes glow add light instead of color overlay */
+}
+
+.board { position: relative; }
+
+/* The canvas sits on top of the image/map, but ignores pointer events */
+.fx-layer{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:333; /* above image and overlays; adjust if you also use glow layers */
+}
+
+
+
+
+/* Pulse animation — expands & fades */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgb(255, 0, 0),
+                0 0 6px rgb(255, 238, 0);
+    opacity: 11;
+  }
+  50% {
+    box-shadow: 0 0 8px rgb(195, 0, 255),
+                0 0 6px rgb(0, 162, 255);
+    opacity: 5;
+  }
+}
+.fancy-hed{
+  font-family: "Spantaran";
+  font-weight: 700;
+  font-size: clamp(3.2rem, 3.8vw, 3.8rem); /* bigger headline */
+  line-height: 1.08;
+  letter-spacing: 0.05em;
+  margin: 0 0 .5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* (optional) make the subtext a touch larger too */
+.hero p, .subtext{
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.ticker{
+  height: 44px;
+  display: flex;   
+  width: var(--board-size);            /* or 100% */
+  margin: 0px 0px;
+  background: #ffd24a;                 /* yellow bar */
+  color: #111;
+  border-radius: 9px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  overflow: hidden;                    /* clean edges */
+  font: 800 16px/42px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.ticker marquee{
+  display: block;
+  line-height: 1;               /* no extra leading */
+  margin: 0;
+  padding: 0;                   /* side breathing room */
+  white-space: pre;               /* keep it one line */
+}
+
+
+
+html, body { height: 100%; }
+    body {
+      margin: 0;
+      background:#111 /*url("test.jpg") center / cover no-repeat fixed;
+      /* If your image is in assets: url("assets/img/test.jpg") */
+    }
+
+

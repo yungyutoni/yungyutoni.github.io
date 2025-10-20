@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About This Project</title>
+  <meta name="description" content="Learn how the pixel board works, why it exists, and how to claim your space."/>
+  <link rel="stylesheet" href="aboutproject.css">
+  <script src="aboutproject.js" defer></script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>About This Project</h1>
+      <p class="sub">
+        This is a virtual time capsule — a quiet rebellion against forgetting. Here, your Image and Sound become part of humanity’s collective digital history, preserved in the electronic "Voyager". 
+        It’s our golden record to the centuries ahead.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="selector.html">Choose your slots</a>
+        <a class="btn" href="index.html">Back to the board</a>
+        <a class="btn sun" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </header>
+    <!-- ABOUT THIS PROJECT (place right after the hero section) -->
+<section class="section" id="about-project">
+  
+  <h2>About This Project</h2>
+  <p>
+The internet changes faster than memory itself, but this wall will stay.
+It’s meant to be a time capsule — a digital monument that might outlive us all.
+Perhaps, centuries from now, someone will dig through the ruins of the web,
+like digital archaeologists, and stumble upon this place.
+They’ll find Your Image, Your Message, Your Sound —
+a heartbeat from another age,
+a whisper from our present to their distant tomorrow.
+  </p>
+  <p>
+When NASA launched the Voyager probes,
+they carried a golden record — voices, music, greetings in fifty-five languages —
+a message to whoever might find it among the stars.
+This wall is our version of that record.
+Only this time, the message isn’t traveling through space —
+it’s drifting through the endless universe of the internet.
+  </p>
+  <p>
+I want this wall to be honest — a transparent mirror of who we truly are.
+Not a museum of perfection, but real — messy, brilliant, human.
+A living archive of our collective noise and beauty.
+  </p>
+  <p>
+    Every slot on this wall is a small act of defiance against forgetting.
+A way to say I was here. We were here.
+A chance to be remembered,
+not just by algorithms or history books —
+but by the curious souls of the future who come looking for us.
+  </p>
+</section>
+<section class="parallax-band" aria-hidden="true"></section>
+  <!-- BODY -->
+  <main style="padding:24px var(--pad) 8px">
+
+    <section class="section grid" id="how-it-works">
+      <div class="col-6">
+        <h2>How it works</h2>
+        <p>
+          The canvas is fixed at <strong>1000×1000</strong> pixels. Each slot is
+          <strong>10×10</strong>, so there are 100×100 slots in total. You choose
+          any free area, send your image (sized to the exact slot area), a link, an alt text and a sound.
+          I review and publish it on the live board.
+        </p>
+        <ul>
+          <li>Pixel-perfect placement (snaps to the grid).</li>
+          <li>Hover labels</li>
+          <li>Clickable link</li>
+          <li>Playable sound on hover</li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <h2>What to send</h2>
+        <ul>
+          <li>Your coordinates (e.g., <code>42,13–46,15</code>).</li>
+          <li>An image</li>
+          <li>A destination URL</li>
+          <li>A short alt label (what people see when hover over your image)</li>
+          <li>Sound to play when hovered over your picture</li>
+          <li>Glow and Sparks animations are attention-grabbing elements, thus cost extra</li>
+        </ul>
+        <p style="color:var(--muted)">
+          Need help sizing? Pick the area first on the selector; it shows exact pixel dimensions.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Rules & Guidelines</h2>
+      <ul>
+        <li>No illegal, hateful, or violent content. I reserve moderation rights.</li>
+        <li>Images should be within brand usage rights.</li>
+        <li>Publishing order: payment → review → placement on the board.</li>
+      </ul>
+    </section>
+
+    <section class="section grid">
+      <div class="col-6">
+        <h2>Pricing & Status</h2>
+        <p>
+          Slots can be <em>free</em>, <em>held</em>, or <em>sold</em>. Pricing is per 10×10 slot.
+          Payments are made only in crypto, USDT. Reach out for custom shapes or collaborations.
+        </p>
+      </div>
+      <div class="col-6">
+        <h2>Contact</h2>
+        <p>
+            Instagram: <img src="/assets/icons/instagram.png" alt="" class="icon"> <a href="https://www.instagram.com/yungyutoni/" style="color:var(--accent)">@yungyutoni</a>
+        <br>E-mail: <img src="/assets/icons/gmail.png" alt="" class="icon"> futuregamecompany@gmail.com
+        <br> Telegram: <img src="/assets/icons/telegram.webp" alt="" class="icon"> @yungyutoni
+      </p>
+        <p>
+          Want to jump in? Head straight to the selector and pick your coordinates.
+        </p>
+        <div class="actions" style="justify-content:flex-start">
+          <a class="btn primary" href="selector.html">Open selector</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="y"></span> Simulacra — A tiny museum of web pixels.
+  </footer>
+
+  <script>
+    // year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

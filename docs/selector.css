@@ -1,0 +1,46 @@
+
+    .btn,
+    .btn:link,
+    .btn:visited,
+    .btn:hover,
+    .btn:focus,
+    .btn:active{
+  text-decoration: none;
+    }
+    
+    :root{
+      --page-bg:#000;
+      --text:#fff;
+      --size:1000px;
+      --grid:#777;     /* grid lines */
+      --free:#9BE7A0;  /* FREE  */
+      --sold:#D32F2F;  /* SOLD  */
+      --held:#FFC107;  /* HELD  */
+      --hover:#bdbdbd; /* hover */
+      --picked:#616161;/* selected */
+      --muted:#cfd8dc;
+      --accent:#4fc3f7;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--page-bg);color:var(--text);
+      font:14px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+    .wrap{width:min(96vw,1400px);margin:0 auto;padding:26px 16px 64px}
+    header{text-align:center;margin:4px 0 14px}
+    header h1{margin:0 0 4px;font-size:18px;font-weight:800}
+    header p{margin:0;color:var(--muted)}
+
+    .legend{margin:10px auto 8px;display:flex;gap:12px;justify-content:center;align-items:center;font-size:12px;color:var(--muted)}
+    .sw{width:12px;height:12px;border:1px solid #83919a}
+    .sw.free{background:var(--free)} .sw.sold{background:var(--sold)}
+    .sw.held{background:var(--held)} .sw.picked{background:var(--picked)}
+
+    .controls{margin:10px auto;display:flex;gap:8px;justify-content:center;align-items:center}
+    .btn{background:#141a22;border:1px solid #283242;color:var(--text);padding:6px 12px;border-radius:8px;cursor:pointer}
+    .btn:hover{border-color:#405674}
+
+    .readout{margin:6px auto 0;max-width:1000px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:12px}
+    .coords{max-width:1000px;margin:6px auto 0;color:#e7edf6;font-size:12px;text-align:center;word-break:break-word;line-height:1.6}
+
+    .stage{width:max-content;margin:8px auto 0}
+    canvas{display:block;width:var(--size);height:var(--size);background:#fff;border:1px solid #fff;image-rendering:pixelated;cursor:crosshair}

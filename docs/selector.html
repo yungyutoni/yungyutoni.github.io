@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Selector — 10×10 Grid (Click + Drag, Clear + Copy JSON)</title>
+  <link rel="stylesheet" href="selector.css">
+</head>
+<body>
+  <main class="wrap">
+    <script src="selector.js" defer></script>
+    <header>
+      <h1>Selector — 10×10 Grid</h1>
+      <p>Hover to preview · <strong>Click</strong> toggles a free cell · <strong>Drag</strong> selects a rectangle of free cells.</p>
+    </header>
+
+    <!-- Legend ABOVE the canvas -->
+    <div class="legend">
+      <span class="sw free"></span> Free
+      <span class="sw sold"></span> Sold
+      <span class="sw held"></span> Held
+      <span class="sw picked"></span> Selected
+    </div>
+
+    <!-- Only TWO buttons: Clear + Copy JSON -->
+    <div class="controls">
+      <a class="btn" href="index.html">Home</a>
+      <button class="btn" id="refresh">Refresh</button>
+      <button class="btn" id="clear">Clear</button>
+      <button class="btn" id="copyJson">Copy Coordinates</button>
+    </div>
+
+    <div class="readout">
+      <strong style="color:var(--accent)">Selected:</strong>
+      <span id="count">0</span> cells
+    </div>
+    <div class="coords" id="coords">(none)</div>
+
+    <section class="stage" aria-label="1000 by 1000 grid">
+      <canvas id="stage" width="1000" height="1000" aria-label="grid canvas"></canvas>
+    </section>
+  </main>
+</body>
+</html>
+
