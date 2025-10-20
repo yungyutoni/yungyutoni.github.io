@@ -11,7 +11,7 @@
 
   #soundIndicator{
     position:fixed; top:12px; right:14px; z-index:9999;
-    font: 700 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font: 700 17px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     letter-spacing:.04em; text-transform:uppercase;
     color:#ff3b30;                  /* red */
     user-select:none; pointer-events:none;  /* doesn’t block the click */
@@ -200,5 +200,6 @@ html, body { height: 100%; }
       background:#111 /*url("test.jpg") center / cover no-repeat fixed;
       /* If your image is in assets: url("assets/img/test.jpg") */
     }
+
 
 
