@@ -231,8 +231,11 @@
       const glow = document.createElement('div');
       glow.className = 'glow';
       // optional per-area color (fallback to CSS default)
-      const color = area.dataset.glow;
-      if (color) glow.style.setProperty('--glow', color);
+      // optional per-area glow customization
+    if (area.dataset.glow) glow.style.setProperty('--glow', area.dataset.glow);
+    if (area.dataset.glowSpeed) glow.style.setProperty('--glow-speed', area.dataset.glowSpeed);
+    if (area.dataset.glowIntensity) glow.style.setProperty('--glow-intensity', area.dataset.glowIntensity);
+
 
       // percent-based so it follows the image on zoom/resize
       glow.style.left   = (x1/1000*100)       + '%';
