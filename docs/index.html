@@ -12,7 +12,7 @@
 <!-- Add the counter instance somewhere to your template... -->
  
 <div class="hud">
-<div class="counterapi" style="min-height:44px" abbreviate="true" color="white" noAnim="true" bg="transparent" noLink="false" startNumber="22"></div>
+<div class="counterapi" style="min-height:44px" abbreviate="true" color="white" noAnim="true" bg="transparent" noLink="true"></div>
 <h2>The Biggest Buyer: </h2>
 <h3>People participated: 2</h3>
 <span id="soldCount">0</span>
@@ -28,15 +28,14 @@
         <!-- Optional: add About button later if you like -->
         <!-- <a class="btn" href="about.html">About this project</a> -->
       </div>
-
-      <div id="soundIndicator">CLICK TO ACTIVATE SOUND</div>
-      
     </header>
 <div class="ticker">
   <marquee behavior="scroll" direction="left">
     <strong>ANGEL INVESTORS:                                                                                                           YOUR AD COULD BE HERE </strong>
   </marquee>
 </div>
+
+<div id="soundIndicator">CLICK TO ACTIVATE SOUND</div>
 
     <!-- Main board (your exported mosaic/grid image) -->
     <section class="board" aria-label="Main mosaic board">
@@ -46,11 +45,15 @@
         <!-- HOTSPOT for slots 46–54 (x), 1–3 (y) => pixels 450,0 to 540,30 -->
         <area shape="rect"
               coords="450,0,540,30"
-              href="https://www.instagram.com/danfromacidworld/"
+              href="https://www.instagram.com/yungyutoni/"
               target="_blank"
               rel="nofollow noopener"
-              data-label="Thanks for passing on the soda. It helps me see faster."
-              data-glow="#00e5ff"
+              data-label="Born at 22 in a Paris bathtub"
+
+              data-glow="#fc035e"
+              data-glow-intensity="0.5"
+              data-glow-speed="0.5s"
+
               data-sound="\assets\sounds\yyutoni.wav"
               data-sparks="true"          
               data-color="#d14848"        
@@ -67,13 +70,37 @@
               target="_blank"
               rel="nofollow noopener"
               data-label="shnüs by shtraff"
-              data-glow="#00e5ff"
+
+              data-glow="#fc7f03"
+              data-glow-intensity="0.5"
+              data-glow-speed="1s"
+
+              data-glow="##6bbd00"
               data-sound="\assets\sounds\taras.mp3"
               data-sparks="true"          
               data-color="#d14848"        
               data-intensity="3.0"        
               data-speed="9.0"            
               data-size="2.2">            <!-- 0.5–2.0: particle radius scale -->
+              <!-- To add more buys, append more <area> elements with their pixel rectangles -->
+                 <area shape="rect"
+              coords="470,300,530,360"
+              href="https://www.instagram.com/lanjeoyoutube"
+              target="_blank"
+              rel="nofollow noopener"
+              data-label="smile \\\"
+
+              data-glow="#fc03ec"
+              data-glow-intensity="0.5"
+              data-glow-speed="1s"
+
+              data-color="#03fc4e" 
+              data-sound="\assets\sounds\andr.mp3"
+              data-sparks="true"          
+              data-color="#d14848"        
+              data-intensity="3.0"        
+              data-speed="9.0"            
+              data-size="2.2">        
                <!-- USE <area> for defining coords and placing link/label! -->
               <!-- Canvas for edge sparks -->
             <canvas id="fx" class="fx-layer" width="1000" height="1000" aria-hidden="true"></canvas>
@@ -100,18 +127,5 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
   <br>
-
-  
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
