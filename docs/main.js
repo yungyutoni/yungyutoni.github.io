@@ -323,7 +323,7 @@ area.addEventListener('mouseenter', () => {
 
   // force known good state & play every time
   audio.loop = false;           // optional
-  audio.volume = 0.4;            // or your base (e.g. 0.6)
+  audio.volume = parseFloat(area.dataset.volume || '0.5');            // or your base (e.g. 0.6)
   audio.currentTime = 0;
   audio.play().catch(()=>{});
 });
@@ -377,5 +377,6 @@ setInterval(updateSoldCount, 5000);
 
     window.removeEventListener('pointerdown', activate, true);
   }, true);
+
 
 
