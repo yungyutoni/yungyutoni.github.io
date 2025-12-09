@@ -10,26 +10,33 @@
     }
 
 
-@media (max-width: 900px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    color: white;
-    font-size: 20px;
-    height: 100vh;
-    text-align: center;
-  }
-  .wrap, .board, canvas, img, * {
-    display: none !important;
-  }
-  body::before {
-    content: "For now this project is available only on desktop devices.";
-    display: block;
-  }
+/* hidden by default on desktop */
+#mobile-block {
+  display: none;
 }
 
+/* show message + hide site on small screens */
+@media (max-width: 900px) {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+  }
+
+  #mobile-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    font: 18px/1.4 system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+
+  .wrap {
+    display: none !important;  /* hide the real site */
+  }
+}
 
 @font-face {
   font-family: "Spantaran";
@@ -238,6 +245,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
