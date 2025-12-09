@@ -164,7 +164,7 @@
 }
 
 .fancy-hed{
-  font-family: "Spantaran";
+  font-family: "Slugs Racer";
   font-weight: 700;
   font-size: clamp(3.2rem, 3.8vw, 3.8rem); /* bigger headline */
   line-height: 1.08;
@@ -216,5 +216,6 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
