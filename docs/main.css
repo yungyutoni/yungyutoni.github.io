@@ -8,6 +8,16 @@
       --accent:#4fc3f7;
       --board-size:1000px; /* keep fixed to match image-map pixel coords */
     }
+
+@font-face {
+  font-family: "Slugs Racer";
+  src:
+    url("assets/Slugs Racer.woff2") format("woff2"),
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
     /* If your big title lives inside .hero, use absolute on that section */
 .hero { position: relative; }              /* ensure a positioning context */
 
@@ -206,4 +216,5 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
