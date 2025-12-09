@@ -1,16 +1,3 @@
-  // Detect phones & tablets
-  if (/Mobi|Android|iPhone|iPad|iPod|Tablet|Mobile/i.test(navigator.userAgent)) {
-    // Redirect or block
-    document.body.innerHTML = `
-      <div style="
-        color: white;
-        font: 20px Arial, sans-serif;
-        text-align: center;
-        padding: 40px;">
-        For now this project is available only on desktop devices.
-      </div>
-    `;
-  }
 
 (function(){
   // ---- Grab elements ----
@@ -389,6 +376,7 @@ setInterval(updateSoldCount, 5000);
 
     window.removeEventListener('pointerdown', activate, true);
   }, true);
+
 
 
 
