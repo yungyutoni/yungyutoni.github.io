@@ -10,9 +10,9 @@
     }
 
 @font-face {
-  font-family: "Spantarun";
+  font-family: "Spantaran";
   src:
-    url("assets/Spantarun.woff2") format("woff2"),
+    url("assets/Spantaran.woff2") format("woff2"),
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -164,7 +164,7 @@
 }
 
 .fancy-hed{
-  font-family: "Spantarun";
+  font-family: "Spantaran";
   font-weight: 700;
   font-size: clamp(3.2rem, 3.8vw, 3.8rem); /* bigger headline */
   line-height: 1.08;
@@ -216,6 +216,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
