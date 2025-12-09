@@ -9,6 +9,28 @@
       --board-size:1000px; /* keep fixed to match image-map pixel coords */
     }
 
+
+@media (max-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 20px;
+    height: 100vh;
+    text-align: center;
+  }
+  .wrap, .board, canvas, img, * {
+    display: none !important;
+  }
+  body::before {
+    content: "For now this project is available only on desktop devices.";
+    display: block;
+  }
+}
+
+
 @font-face {
   font-family: "Spantaran";
   src:
@@ -216,6 +238,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
