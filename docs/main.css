@@ -21,6 +21,14 @@
   font-display: swap;
 }
 
+
+@media (max-width: 900px) {
+  .hud {
+    display: none !important;
+  }
+}
+
+
     /* If your big title lives inside .hero, use absolute on that section */
 .hero { position: relative; }              /* ensure a positioning context */
 
@@ -117,10 +125,6 @@
     font-size: clamp(2.2rem, 8vw, 3rem);
   }
 
-  .ticker{
-    width:100%;
-    border-radius: 0.75rem;
-  }
 }
 
 
@@ -246,6 +250,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
