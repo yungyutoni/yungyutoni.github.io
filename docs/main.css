@@ -100,6 +100,33 @@
       
     }
 
+
+
+/* On small screens, shrink the board to fit the viewport */
+@media (max-width: 900px) {
+  :root {
+    --board-size: 94vw;   /* board becomes ~screen width instead of 1000px */
+  }
+
+  .wrap{
+    width:100vw;
+    padding:16px 8px 40px;
+  }
+
+  header h1{
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .ticker{
+    width:100%;
+    border-radius: 0.75rem;
+  }
+}
+
+
+
+
+
     #instant-tip{
   position:fixed; pointer-events:none; z-index:9999;
   background:rgba(0, 0, 0, 0.85); color:#fff;
@@ -219,6 +246,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
