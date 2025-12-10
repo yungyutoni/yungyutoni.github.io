@@ -23,7 +23,8 @@
 
 
 @media (max-width: 900px) {
-  .hud {
+  .hud,
+  #soundIndicator {
     display: none !important;
   }
 }
@@ -250,6 +251,7 @@ html, body { height: 100%; }
     user-select:none; pointer-events:none;  /* doesn’t block the click */
   }
   #soundIndicator.on{ color:#22c55e; }      /* green */
+
 
 
 
